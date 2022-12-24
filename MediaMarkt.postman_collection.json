@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "b19e6a8a-62d9-40f0-95ab-a0b1cb7cc089",
+		"name": "MediaMarkt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23503026"
+	},
+	"item": [
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "7710984d-2308-486c-b06b-89059cd1319b",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-api-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.mediamarkt.com.tr/?langId=-14&rememberMe=true",
+					"protocol": "https",
+					"host": [
+						"www",
+						"mediamarkt",
+						"com",
+						"tr"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "langId",
+							"value": "-14"
+						},
+						{
+							"key": "rememberMe",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UrunEkleme",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "7710984d-2308-486c-b06b-89059cd1319b",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-api-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"name\": \"BASKET_OPERATIONS\",\r\n    \"userId\": \"3551931801947496449\",\r\n    \"sessionId\": \"3551931801947496448\",\r\n    \"testMode\": \"false\",\r\n    \"device\": \"PC\",\r\n    \"noProcess\": false,\r\n    \"tryCount\": 0,\r\n    \"nextPage\": false,\r\n    \"params\": {},\r\n    \"recommendIds\": [],\r\n    \"pageUrl\": \"https://www.mediamarkt.com.tr/tr/product/_jbl-c100s%C4%B1-kulak-i%C3%A7i-kablolu-kulakl%C4%B1k-siyah-1167623.html?waw_keyword=jbl%20kulak%20i%C3%A7i%20kulakl%C4%B1k\",\r\n    \"referrer\": \"https://www.mediamarkt.com.tr/tr/search.html?query=jbl+kulak+i%C3%A7i+kulakl%C4%B1k&searchProfile=onlineshop&channel=mmtrtr\",\r\n    \"browser\": \"Chrome\",\r\n    \"os\": \"Windows\",\r\n    \"osversion\": \"10\",\r\n    \"userAgent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36\",\r\n    \"lang\": \"TR\",\r\n    \"currency\": \"TRY\",\r\n    \"region\": \"\",\r\n    \"async\": \"false\",\r\n    \"globalMode\": \"REAL\",\r\n    \"experiments\": {},\r\n    \"email\": \"\",\r\n    \"ft\": \"2022.10.29 01:16:51.967\",\r\n    \"tz\": \"-180\",\r\n    \"productId\": \"1167623\",\r\n    \"basketId\": \"basket_3551931801947496449\",\r\n    \"step\": \"add\",\r\n    \"price\": \"169.00\",\r\n    \"quantity\": 1\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://per2.segmentify.com/add/events/v1.json?apiKey=364a1848-49fd-45b7-9ad5-881508025e6d",
+					"protocol": "https",
+					"host": [
+						"per2",
+						"segmentify",
+						"com"
+					],
+					"path": [
+						"",
+						"add",
+						"events",
+						"v1.json"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "364a1848-49fd-45b7-9ad5-881508025e6d"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
